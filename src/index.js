@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 ReactDOM.render(
-    React.createElement("h1", {style: {color: "red"}}, "Hello World!"),
-  document.getElementById('root')
+
+    <ul>
+        <li>Bulbasuar</li>
+        <li>Charmander</li>
+        <li>Squirtle</li>
+        <li>Pikachu</li>
+        <li>Eevee</li>
+
+    </ul>,
+
+    document.getElementById('root')
 );
