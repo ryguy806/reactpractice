@@ -1,65 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const pokemonList = [
-    {
-        number: 1,
-        name: "Bulbasaur",
-        type: "Grass/Poison"
-    },
-    {
-        number: 4,
-        name: "Charmander",
-        type: "Fire"
-    },
-    {
-        number: 7,
-        name: "Squirtle",
-        type: "Water"
-    }
-];
-
-const pokemonList2 = [
-    {
-        number: 152,
-        name: "Chikorita",
-        type: "Grass"
-    },
-    {
-        number: 155,
-        name: "Cyndiquil",
-        type: "Fire"
-    },
-    {
-        number: 158,
-        name: "Totodile",
-        type: "Water"
-    }
-]
-
-
-function Kanto() {
-    return (
-        <div>
-            Welcome to the Kanto region!
-        </div>
-    )
-}
-
-function Jhoto() {
-    return  (
-        <>
-            Welcome to the Jhoto region!
-        </>
-    )
-}
-
 function App() {
+    
+    const [status, setStatus] = useState("Open");
     return (
         <div>
-            <Kanto/>
-            <Jhoto/>
+            <h1>Status: {status}</h1>
+            <button onClick={() => setStatus("Open")}>Open</button>
+            <button onClick={() => setStatus("Back In 5")}>Break</button>
+            <button onClick={() => setStatus("Closed")}>Closed</button>
         </div>
     )
 }
@@ -70,12 +21,3 @@ ReactDOM.render(
 
     document.getElementById('root')
 );
-
-
-
-
-    const [first, second, third] = ["popcoorn", "pretzels", "pineapple"];
-
-console.log(first);
-console.log(second);
-console.log(third);
