@@ -39,49 +39,43 @@ const pokemonList2 = [
 ]
 
 
-function Kanto({pokemon}) {
+function Kanto() {
     return (
         <div>
-            <h1>Visit Professor Oak's Lab!</h1>
-            <div>
-                {pokemon.map(poke => (
-                    <div>
-                        <h2>{poke.name}</h2>
-                        <p>{poke.type}</p>
-                    </div>
-                ))}
-            </div>
+            Welcome to the Kanto region!
         </div>
     )
 }
 
-function Jhoto({pokemon}) {
+function Jhoto() {
     return  (
-        <div>
-            <h1>Visit Professor Elm's Lab!</h1>
-            <div>
-                {pokemon.map(poke => (
-                    <div>
-                        <h2>{poke.name}</h2>
-                        <p>{poke.type}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
+        <>
+            Welcome to the Jhoto region!
+        </>
     )
 }
 
-function App(props) {
+function App() {
     return (
         <div>
-            {(props.location === "Kanto") ? (<Kanto pokemon={pokemonList}/>) : (<Jhoto pokemon={pokemonList2}/>)}
+            <Kanto/>
+            <Jhoto/>
         </div>
     )
 }
 
 ReactDOM.render(
 
-    <App location="Jhoto"/>,
+    <App/>,
 
     document.getElementById('root')
 );
+
+
+
+
+    const [first, second, third] = ["popcoorn", "pretzels", "pineapple"];
+
+console.log(first);
+console.log(second);
+console.log(third);
