@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+let city = {
+        name: "Lavender Town",
+        region: "Kanto"
+}
+
 ReactDOM.render(
 
-    <ul>
-        <li>Bulbasuar</li>
-        <li>Charmander</li>
-        <li>Squirtle</li>
-        <li>Pikachu</li>
-        <li>Eevee</li>
-
-    </ul>,
+    <h1 id="heading" className="cool-text">{city.name} is in the {city.region} region</h1>,
 
     document.getElementById('root')
 );
